@@ -1,0 +1,14 @@
+[custom.all.fixnum-benchmarking]
+type = "local"
+path = "."
+ipkg = "fixnum-benchmarking.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.fixnum-benchmarking-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
+
+[idris2]
+url = "/home/matthewmosior/Software/git/Idris2-My-Branch/Idris2"
+commit = "latest:use-fixnums-for-multiplication-up-to-bits16-and-addition-and-subtraction-up-to-bits32"

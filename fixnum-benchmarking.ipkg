@@ -1,0 +1,8 @@
+package fixnum-benchmarking
+version = 0.1.0
+authors = "Matthew-Mosior"
+depends = base
+        , profiler
+main = Main
+executable = "fixnum-benchmarking"
+sourcedir = "src"
