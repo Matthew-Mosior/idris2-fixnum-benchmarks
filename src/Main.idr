@@ -12,28 +12,28 @@ import System
 
 bench : Benchmark Void
 bench =
-  Group "Fixnum operations benchmarking"
-    [ Group "Addition"
-        [ Single "Addition over Bits8"  (basic loopbits8add (32, 2))
-        , Single "Addition over Int8"  (basic loopint8add (32, 2))
-        , Single "Addition over Bits16" (basic loopbits16add (362, 194))
-        , Single "Addition over Int16" (basic loopint16add (362, 194))
-        , Single "Addition over Bits32" (basic loopbits32add (92682, 65574))
-        , Single "Addition over Int32" (basic loopint32add (92682, 65574))
+  Group "fixnum"
+    [ Group "addition"
+        [ Single "Bits8"  (basic loopbits8add (32, 2))
+        , Single "Int8"  (basic loopint8add (32, 2))
+        , Single "Bits16" (basic loopbits16add (362, 194))
+        , Single "Int16" (basic loopint16add (362, 194))
+        , Single "Bits32" (basic loopbits32add (92682, 65574))
+        , Single "Int32" (basic loopint32add (92682, 65574))
         ]    
-    , Group "Subtraction"
-        [ Single "Subtraction over Bits8"   (basic loopbits8sub (23, 255))
-        , Single "Subtraction over Int8"   (basic loopint8sub (23, 255))
-        , Single "Subtraction over Bits16" (basic loopbits16sub (362, 65535))
-        , Single "Subtraction over Int16" (basic loopint16sub (362, 65535))
-        , Single "Subtraction over Bits32" (basic loopbits32sub (92682, 4294967295))
-        , Single "Subtraction over Int32" (basic loopint32sub (92682, 4294967295))
+    , Group "subtraction"
+        [ Single "Bits8"   (basic loopbits8sub (23, 255))
+        , Single "Int8"   (basic loopint8sub (23, 255))
+        , Single "Bits16" (basic loopbits16sub (362, 65535))
+        , Single "Int16" (basic loopint16sub (362, 65535))
+        , Single "Bits32" (basic loopbits32sub (92682, 4294967295))
+        , Single "Int32" (basic loopint32sub (92682, 4294967295))
         ]
-    , Group "Multiplication"
-        [ Single "Multplication over Bits8"   (basic loopbits8mul (5, 2))
-        , Single "Multplication over Int8"   (basic loopint8mul (5, 2))
-        , Single "Multiplication over Bits16" (basic loopbits16mul (8, 1))
-        , Single "Multiplication over Int16" (basic loopint16mul (8, 1))
+    , Group "multiplication"
+        [ Single "Bits8"   (basic loopbits8mul (5, 2))
+        , Single "Int8"   (basic loopint8mul (5, 2))
+        , Single "Bits16" (basic loopbits16mul (8, 1))
+        , Single "Int16" (basic loopint16mul (8, 1))
         ]
     ]
 
